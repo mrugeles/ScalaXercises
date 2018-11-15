@@ -5,6 +5,6 @@ package Rationals
   * Create Unit Tests for these operations
   */
 
-class Rational {
+class Rational(x: Int, y: Int) {
 
 }
