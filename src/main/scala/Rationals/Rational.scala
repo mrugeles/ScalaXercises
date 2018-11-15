@@ -10,6 +10,32 @@ package Rationals
   *   Printing r3 should show "5/6"
   */
 
-class Rational(x: Int, y: Int) {
+class Rational(val x: Int,val y: Int) {
+
+
+  def +(r:Rational): Rational = {
+    new Rational(this.x*r.y + r.x*this.y,this.y*r.y)
+  }
+
+  def -(r:Rational): Rational = {
+    new Rational(this.x*r.y - r.x*this.y,this.y*r.y)
+  }
+
+  def *(r:Rational): Rational = {
+    new Rational(this.x*r.x,this.y*r.y)
+  }
+
+  def /(r:Rational): Rational = {
+
+    this*(new Rational(r.y, r.x))
+    //new Rational(this.x/r.x,this.y/r.y)
+  }
+
+  override def toString():String = {
+    this.x + "/" + this.y
+  }
+
+
+
 
 }
