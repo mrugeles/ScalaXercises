@@ -1,0 +1,109 @@
+SHELL=/bin/bash
+MAIL=""
+SCRIPT_BASE=/home/hadoop/jobTracker
+PATH=/home/hadoop/jobTracker:/usr/bin:/bin
+
+# Retired as part of Copenhagen
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh comcast >> $SCRIPT_BASE/logs/comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator-comcast.sh >> $SCRIPT_BASE/logs/xre-translator-comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh other >> $SCRIPT_BASE/logs/xre-translator-other.log 2>&1
+
+# Legacy DVRScheduler processing. We need to keep these up until partners move to the newer streams.
+# Disabled as part of Downconversion - CHG000053716 (DATASYN-3944) - 02202019
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh cox >> $SCRIPT_BASE/logs/xre-translator-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh shaw >> $SCRIPT_BASE/logs/xre-translator-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh rogers >> $SCRIPT_BASE/logs/xre-translator-rogers.log 2>&1
+
+*/5 * * * * $SCRIPT_BASE/kinesis-est-translator.sh >> $SCRIPT_BASE/logs/kinesis-est-translator.log 2>&1
+
+# DQV Jobs Migrated from 03p
+###Disabled the below 4 DQV jobs on 01-14-2019 as part of Storm Decomm - CHG000048561 ###
+#*/5 * * * * $SCRIPT_BASE/dqv_job_errors.sh >> $SCRIPT_BASE/logs/dqv_job_errors.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dqv_job_reconnects.sh >> $SCRIPT_BASE/logs/dqv_job_reconnects.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dqv_job_trickplays.sh >> $SCRIPT_BASE/logs/dqv_job_trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dqv_job_tunes.sh >> $SCRIPT_BASE/logs/dqv_job_tunes.log 2>&1
+
+# DVQ jobs Production
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-production-rogers.sh >> $SCRIPT_BASE/logs/dvq-validator-production-rogers.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-production-shaw.sh >> $SCRIPT_BASE/logs/dvq-validator-production-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-production-comcast.sh >> $SCRIPT_BASE/logs/dvq-validator-production-comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-production-cox.sh >> $SCRIPT_BASE/logs/dvq-validator-production-cox.log 2>&1
+
+# DVQ Validator Staging
+# Comcast was too large. It was split into DVRScheduler / everything else and moved to 03s.
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-staging-comcast.sh >> $SCRIPT_BASE/logs/dvq-validator-staging-comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-staging-cox.sh >> $SCRIPT_BASE/logs/dvq-validator-staging-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-staging-shaw.sh >> $SCRIPT_BASE/logs/dvq-validator-staging-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dvq-validator-staging-rogers.sh >> $SCRIPT_BASE/logs/dvq-validator-staging-rogers.log 2>&1
+
+# RDK-B Delivery Jobs (Staging) migrated from 03s
+#*/5 * * * * $SCRIPT_BASE/rdkb-rogers-to-x12e-rdkb.sh >> $SCRIPT_BASE/logs/rdkb-rogers-to-x12e-rdkb.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/rdkb-shaw-delivery-to-shaw.sh >> $SCRIPT_BASE/logs/rdkb-shaw-delivery-to-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/rdkb-cox-delivery-to-cox.sh >> $SCRIPT_BASE/logs/rdkb-cox-delivery-to-cox.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/rdkb-videotron-delivery-to-videotron.sh >> $SCRIPT_BASE/logs/rdkb-videotron-delivery-to-videotron.log 2>&1
+
+#XRE Comcast Brussels Jobs
+#Moved from 03p
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/comcast/checkSubmit.xre-v2.sh comcast media >> $SCRIPT_BASE/logs/xre-v2-comcast-media.log 2>&1
+
+# Disabled as part of Downconversion - CHG000053716 (DATASYN-3944) - 02202019
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/checkSubmit.xre-v2.sh cox 30g >> /mnt1/logs/xre-v2-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/checkSubmit.xre-v2.sh shaw 12g >> /mnt1/logs/xre-v2-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/checkSubmit.xre-v2.sh rogers 8g >> /mnt1/logs/xre-v2-rogers.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/checkSubmit.xre-v2.8.1.sh videotron 4g >> /mnt1/logs/xre-v2.8.1-videotron.log 2>&1
+
+#XRE Partner Brussels Jobs :
+#Moved from 03p
+#*/5 * * * * $SCRIPT_BASE/xre-Brussels/checkSubmit.xre-v2.sh rogers 4g >> $SCRIPT_BASE/logs/xre-v2-rogers.log 2>&1
+
+# AvroEncoder Errors/Reconnects
+#*/5 * * * * $SCRIPT_BASE/AE-comcast-errors.sh >> /tmp/AE-comcast-errors.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-partner-errors.sh >> /tmp/AE-partner-errors.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-comcast-reconnects.sh >> /tmp/AE-comcast-reconnects.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-partner-reconnects.sh >> /tmp/AE-partner-reconnects.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-comcast-tunes-trickplays.sh >> /tmp/AE-comcast-tunes-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-cox-tunes-trickplays.sh >> /tmp/AE-cox-tunes-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-rogers-tunes-trickplays.sh >> /tmp/AE-rogers-tunes-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/AE-shaw-tunes-trickplays.sh >> /tmp/AE-shaw-tunes-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/ae-experimental-tunes-trickplays.sh >> $SCRIPT_BASE/logs/ae-experimental-tunes-trickplays.log 2>&1
+
+
+# Kinesis To Oracle
+*/5 * * * * $SCRIPT_BASE/kinesis-to-oracle-devices.sh >> $SCRIPT_BASE/logs/kinesis-to-oracle-devices.log 2>&1
+*/5 * * * * $SCRIPT_BASE/kinesis-to-oracle-serviceaccounts.sh >> $SCRIPT_BASE/logs/serviceaccounts.log 2>&1
+*/5 * * * * $SCRIPT_BASE/kinesis-to-oracle-users.sh >> $SCRIPT_BASE/logs/kinesis-to-oracle-users.log 2>&1
+
+########## Moved temporaly from 03s ##########
+#RDK
+#*/5 * * * * $SCRIPT_BASE/rdkv-cox-delivery-to-cox.sh >> $SCRIPT_BASE/logs/rdkv-cox-delivery-to-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/rdkv-rogers-to-x12e-rdkv.sh >> $SCRIPT_BASE/logs/rdkv-rogers-to-x12e-rdkv.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/rdkv-shaw-delivery-to-shaw.sh >> $SCRIPT_BASE/logs/rdkv-shaw-delivery-to-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/rdkb-validator.sh >> $SCRIPT_BASE/logs/rdkb-validator.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/dqv-experimental-trickplays.sh >> $SCRIPT_BASE/logs/dqv-experimental-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/dqv-experimental-tunes.sh >> $SCRIPT_BASE/logs/dqv-experimental-tunes.log 2>&1
+
+# Auto-restart IP Video Streaming
+
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh download-watermark-cox-prod.conf > /mnt/logs/restarter.download-watermark-cox-prod.conf 2>&1
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh download-watermark-rogers-prod.conf > /mnt/logs/restarter.download-watermark-rogers-prod.conf 2>&1
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh download-watermark-shaw-prod.conf > /mnt/logs/restarter.download-watermark-shaw-prod.conf 2>&1
+
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh watermark-sessions-cox-prod.conf > /mnt/logs/restarter.watermark-sessions-cox-prod.conf 2>&1
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh watermark-sessions-rogers-prod.conf > /mnt/logs/restarter.watermark-sessions-rogers-prod.conf 2>&1
+#*/5 * * * * /home/hadoop/restarter/checkAndRestartSessionizer.sh watermark-sessions-shaw-prod.conf > /mnt/logs/restarter.watermark-sessions-shaw-prod.conf 2>&1
+
+# Batch Jobs IP Video
+
+*/5 * * * * /home/hadoop/dist/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p comcast -e prod -v 2.5.2  >> /var/log/comcast-ota-playback-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p cox -e prod -v 2.5.2  >> /var/log/cox-ota-playback-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p shaw -e prod -v 2.5.2  >> /var/log/shaw-ota-playback-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p rogers -e prod -v 2.5.2  >> /var/log/rogers-ota-playback-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p videotron -e prod -v 2.5.2  >> /var/log/videotron-ota-playback-sessions-latest.log 2>&1
+
+*/2 * * * * /home/hadoop/dist/ota-download-sessions-latest/bin/batch-processor.py -p comcast -e prod -v 2.5.0  > /mnt/logs/comcast-ota-download-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-download-sessions-latest/bin/batch-processor.py -p cox -e prod -v 2.5.0  > /mnt/logs/cox-ota-download-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-download-sessions-latest/bin/batch-processor.py -p shaw -e prod -v 2.5.0  > /mnt/logs/shaw-ota-download-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-download-sessions-latest/bin/batch-processor.py -p rogers -e prod -v 2.5.0  > /mnt/logs/rogers-ota-download-sessions-latest.log 2>&1
+*/5 * * * * /home/hadoop/dist/ota-download-sessions-latest/bin/batch-processor.py -p videotron -e prod -v 2.5.0  > /mnt/logs/videotron-ota-download-sessions-latest.log 2>&1

@@ -1,0 +1,400 @@
+
+ALARM
+dx-de.xre.DownloadSessionEvent..completeness.metric.cox
+overall completeness < 90 for 9 datapoints within 2 hours and 15 minutes
+
+ALARM
+dx-de.xre.AppEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 hour
+
+ALARM
+dx-de.xre.TrickPlayEvent.2018-10-18.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+ALARM
+dx-de.xre.PlaybackSessionEvent..completeness.metric.shaw
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+ALARM
+dx-de.xre.RDK-V.TelemetryEvent.2018-10-02.completeness.metric.shaw
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+ALARM
+dx-de.xre.TrickPlayEvent.2018-10-18.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+ALARM
+dx-de.xre.TrickPlayEvent.2018-10-18.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+ALARM
+dx-de.xre.TrickPlayEvent.2018-10-18.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+ALARM
+dx-DE-DVR-STBInitialization-Comcast-Completeness-Alert
+overall completeness < 50 for 12 datapoints within 1 hour
+No actions
+
+ALARM
+dx-DE-DVR-NewSchedules-Comcast-Completeness-Alert
+overall completeness < 50 for 12 datapoints within 1 hour
+No actions
+
+ALARM
+dx-DE-DVR-DeleteRecordings-Comcast-Completeness-Alert
+overall completeness < 50 for 12 datapoints within 1 hour
+No actions
+
+INSUFFICIENT_DATA
+dx-DE-DVR-RMStatusCommunication-Comcast-Completeness-Alert
+overall completeness < 50 for 12 datapoints within 1 hour
+No actions
+
+INSUFFICIENT_DATA
+dx-DE-EST-Shaw-Completeness-Alert
+overall completeness < 50 for 15 datapoints within 1 hour and 15 minutes
+
+INSUFFICIENT_DATA
+dx-DE-EST-Cox-Completeness-Alert
+overall completeness < 30 for 15 datapoints within 1 hour and 15 minutes
+No actions
+
+INSUFFICIENT_DATA
+dx-DE-AppEvent-Cox-Completeness-Alert
+overall completeness < 50 for 3 datapoints within 15 minutes
+
+INSUFFICIENT_DATA
+dx-DE-EST-Rogers-Completeness-Alert
+overall completeness < 50 for 15 datapoints within 1 hour and 15 minutes
+
+INSUFFICIENT_DATA
+dx-DE-AppEvent-Rogers-Completeness-Alert
+overall completeness < 50 for 3 datapoints within 15 minutes
+
+OK
+dx-de.xre.DownloadSessionEvent..completeness.metric.videotron
+overall completeness < 90 for 6 datapoints within 6 hours
+
+OK
+dx-de.xre.DownloadSessionEvent..completeness.metric.shaw
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-DE-DVR-NewSchedules-Cox-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-DE-DVR-DeleteRecordings-Cox-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.hdmi.completeness.metric.cox
+overall completeness < 70 for 1 datapoints within 1 day
+No actions
+
+OK
+dx-de.xre.tune.completeness.metric.cox
+overall completeness < 80 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.reconnect.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.AppEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.SearchMessageEvent.2018-10-25.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ReconnectEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ErrorEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.keypress.completeness.metric.cox
+overall completeness < 0 for 4 datapoints within 20 minutes
+No actions
+
+OK
+dx-de.xre.powersaver.completeness.metric.cox
+overall completeness < 50 for 3 datapoints within 15 minutes
+No actions
+
+OK
+dx-de.xre.TrickPlayEvent.2018-10-18.completeness.metric.videotron
+overall completeness < 50 for 12 datapoints within 3 hours
+
+OK
+dx-de.xre.KeypressEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.PageviewEvent.2018-10-25.completeness.metric.cox
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.pageview.completeness.metric.cox
+overall completeness < 90 for 4 datapoints within 1 hour
+
+OK
+dx-DE-DVR-STBInitialization-Cox-Completeness-Alert
+overall completeness < 40 for 12 datapoints within 1 hour
+
+OK
+dx-de.xre.PowerSaver.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.DownloadSessionEvent..completeness.metric.rogers
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-DE-DVR-RMStatusCommunication-Rogers-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-DE-DVR-DeleteRecordings-Shaw-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-DE-DVR-NewSchedules-Shaw-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-DE-DVR-NewSchedules-Rogers-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-DE-DVR-DeleteRecordings-Rogers-Completeness-Alert
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.HDMI.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 3 datapoints within 3 hours
+
+OK
+dx-de.xre.HDMI.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 5 datapoints within 5 hours
+
+OK
+dx-de.xre.ReconnectEvent.2018-10-02.completeness.metric.videotron
+overall completeness < 50 for 5 datapoints within 1 hour and 15 minutes
+
+OK
+dx-de.xre.RDK-B.TelemetryEvent.2018-10-02.completeness.metric.videotron
+overall completeness < 60 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.PlaybackSessionEvent..completeness.metric.rogers
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.PlaybackSessionEvent..completeness.metric.cox
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.PlaybackSessionEvent..completeness.metric.videotron
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-V.TelemetryEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-V.TelemetryEvent.2018-10-02.completeness.metric.videotron
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-V.TelemetryEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-V.TelemetryEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-B.TelemetryEvent.2018-10-02.completeness.metric.shaw
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-B.TelemetryEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-B.TelemetryEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.RDK-B.TelemetryEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.ErrorEvent.2018-10-02.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ErrorEvent.2018-10-02.completeness.metric.videotron
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.ErrorEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ErrorEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ReconnectEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ReconnectEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ReconnectEvent.2018-10-02.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.TuneEvent.2018-12-03.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.TuneEvent.2018-12-03.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.TuneEvent.2018-12-03.completeness.metric.comcast
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.TuneEvent.2018-12-03.completeness.metric.videotron
+overall completeness < 90 for 3 datapoints within 45 minutes
+
+OK
+dx-de.xre.reconnect.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.reconnect.completeness.metric.rogers
+overall completeness < 70 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.GuideStartupErrorEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.KeypressEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ScreenSaverEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.ScreenSaverEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.PowerSaver.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.SearchMessageEvent.2018-10-25.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.SearchMessageEvent.2018-10-25.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.SearchMessageEvent.2018-10-25.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.PageviewEvent.2018-10-25.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.AppEvent.2018-10-02.completeness.metric.rogers
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.AppEvent.2018-10-02.completeness.metric.shaw
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.GuideStartupErrorEvent.2018-10-02.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.GuideStartupErrorEvent.2018-10-02.completeness.metric.cox
+overall completeness < 90 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.tune.completeness.metric.shaw
+overall completeness < 80 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.startuperror.completeness.metric.cox
+overall completeness < 90 for 4 datapoints within 1 hour
+No actions
+
+OK
+dx-de.xre.search.completeness.metric.cox
+overall completeness < 90 for 4 datapoints within 1 hour
+
+OK
+dx-de.xre.tune.completeness.metric.rogers
+overall completeness < 40 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.error.completeness.metric.rogers
+overall completeness < 50 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.screensaver.completeness.metric.cox
+overall completeness < 0 for 200 datapoints within 16 hours and 40 minutes
+No actions
+
+OK
+dx-de.xre.tune.completeness.metric.comcast
+overall completeness < 80 for 280 datapoints within 23 hours and 20 minutes
+
+OK
+dx-de.xre.hdmi.completeness.metric.shaw
+overall completeness < 70 for 1 datapoints within 1 day
+No actions
+
+OK
+dx-de.xre.keypress.completeness.metric.comcast
+overall completeness < 90 for 280 datapoints within 23 hours and 20 minutes
+
+OK
+dx-de.xre.trickplay.completeness.metric.comcast
+overall completeness < 70 for 280 datapoints within 23 hours and 20 minutes
+
+OK
+dx-de.xre.screensaver.completeness.metric.comcast
+overall completeness < 90 for 280 datapoints within 23 hours and 20 minutes
+
+OK
+dx-de.xre.error.completeness.metric.comcast
+overall completeness < 90 for 280 datapoints within 23 hours and 20 minutes
+
+OK
+dx-de.xre.reconnect.completeness.metric.comcast
+overall completeness < 75 for 1 datapoints within 1 day
+
+OK
+dx-de.xre.hdmi.completeness.metric.comcast
+overall completeness < 90 for 1 datapoints within 1 day
+

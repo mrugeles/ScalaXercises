@@ -1,0 +1,98 @@
+TRANSPORTER_VERSION=2.0.7
+AVRO_ENCODER_VERSION=1.0.13
+DQV_VERSION=0.0.6
+
+#experimental avro encoder - now running in vpanalytic-01s
+#*/5 * * * * $SCRIPT_BASE/test-job/AE-tunes-trickplays.sh >> $SCRIPT_BASE/logs/AE-tunes-trickplays.log 2>&1
+
+# Moved to emr-01p
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-rogers-to-x12e-rdkb.sh >> $SCRIPT_BASE/logs/rdkb-rogers-to-x12e-rdkb.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-shaw-delivery-to-shaw.sh >> $SCRIPT_BASE/logs/rdkb-shaw-delivery-to-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-cox-delivery-to-cox.sh >> $SCRIPT_BASE/logs/rdkb-cox-delivery-to-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-delivery-test.sh >> $SCRIPT_BASE/logs/rdkb-delivery-test.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkv-cox-delivery-to-cox.sh >> $SCRIPT_BASE/logs/rdkv-cox-delivery-to-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkv-rogers-to-x12e-rdkv.sh >> $SCRIPT_BASE/logs/rdkv-rogers-to-x12e-rdkv.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkv-shaw-delivery-to-shaw.sh >> $SCRIPT_BASE/logs/rdkv-shaw-delivery-to-shaw.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-validator.sh >> $SCRIPT_BASE/logs/rdkb-validator.log 2>&1
+
+# Moved to emr-03p
+#*/5 * * * * $SCRIPT_BASE/jobs/rdk-translator-test-cw-2.sh >> $SCRIPT_BASE/logs/rdk-translator.log 2>&1
+
+# Moved to emr-01p
+#*/5 * * * * $SCRIPT_BASE/jobs/kinesis-est-translator.sh >> $SCRIPT_BASE/logs/kinesis-est-translator.log 2>&1
+
+# Experimental
+#*/5 * * * * $SCRIPT_BASE/jobs/ae-experimental-tunes-trickplays.sh >> $SCRIPT_BASE/logs/ae-experimental-tunes-trickplays.log 2>&1
+###Disabled the below 2 DQV jobs on 01-14-2019 as part of Storm Decomm - CHG000048561 ###
+#*/5 * * * * $SCRIPT_BASE/jobs/dqv-experimental-trickplays.sh >> $SCRIPT_BASE/logs/dqv-experimental-trickplays.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dqv-experimental-tunes.sh >> $SCRIPT_BASE/logs/dqv-experimental-tunes.log 2>&1
+
+# DVQ Validator Experimental
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-experimental-comcast.sh >> $SCRIPT_BASE/logs/dvq-validator-experimental-comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-experimental-cox.sh >> $SCRIPT_BASE/logs/dvq-validator-experimental-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-experimental-other.sh >> $SCRIPT_BASE/logs/dvq-validator-experimental-other.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-experimental-shaw.sh >> $SCRIPT_BASE/logs/dvq-validator-experimental-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-experimental-rogers.sh >> $SCRIPT_BASE/logs/dvq-validator-experimental-rogers.log 2>&1
+
+# DVQ Validator Staging
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-staging-comcast.sh >> $SCRIPT_BASE/logs/dvq-validator-staging-comcast.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/dvq-validator-DVRScheduler-comcast.sh >> $SCRIPT_BASE/logs/dvq-validator-DVRScheduler-comcast.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/jobs/rdk-translator.sh >> $SCRIPT_BASE/logs/rdk-translator.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/checkSubmit.xre-Brussels.sh comcast >> /mnt1/xre-Brussels-comcast.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/checkSubmit.xre-Brussels.sh cox >> /mnt1/xre-Brussels-cox.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/checkSubmit.xre-Brussels.sh shaw >> /mnt1/xre-Brussels-shaw.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/checkSubmit.xre-Brussels.sh rogers >> /mnt1/xre-Brussels-rogers.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/comcast/checkSubmit.xre-v2.sh comcast app >> /mnt1/xre-v2-comcast-app.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/comcast/checkSubmit.xre-v2.sh comcast media >> /mnt1/xre-v2-comcast-media.log 2>&1
+#*/1 * * * * /home/hadoop/xre-Brussels/comcast/checkSubmit.xre-v2.sh comcast smart >> /mnt1/xre-v2-comcast-smart.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/comcast/checkSubmit.xre-Brussels.others.sh comcast others >> /mnt1/xre-Brussels-comcast-others.log 2>&1
+#*/5 * * * * /home/hadoop/xre-Brussels/comcast/checkSubmit.xre-Brussels.sh comcast keypress >> /mnt1/xre-Brussels-comcast-keypress.log 2>&1
+
+#Oracle Testing
+
+#*/5 * * * * /home/hadoop/users/acano/jobs/kinesis-oracle-connector-sa-test.sh >> /mnt1/ko-connector-fix.sa-testing.log 2>&1
+#*/5 * * * * /home/hadoop/users/acano/jobs/kinesis-oracle-connector-devices-test.sh >> /mnt1/ko-connector-fix.devices-testing.log 2>&1
+#*/5 * * * * /home/hadoop/users/acano/jobs/kinesis-oracle-connector-users-test.sh >> /mnt1/ko-connector-fix.users-testing.log 2>&1
+
+#Kinesis-To-Oracle Jobs
+#*/5 * * * * $SCRIPT_BASE/jobs/kinesis-to-oracle-serviceaccounts.sh >> $SCRIPT_BASE/logs/serviceaccounts.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/kinesis-to-oracle-users.sh >> $SCRIPT_BASE/logs/kinesis-to-oracle-users.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/kinesis-to-oracle-devices.sh >> $SCRIPT_BASE/logs/kinesis-to-oracle-devices.log 2>&1
+
+#*/5 * * * * $SCRIPT_BASE/jobs/rdk-translator-1.4.sh >> $SCRIPT_BASE/logs/rdk-translator.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdk-validator.sh >> $SCRIPT_BASE/logs/rdk-validator.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/launch-rdk-watcher-prod.sh >> $SCRIPT_BASE/logs/rdk-watcher-prod.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/jobs/rdkb-shaw-delivery-to-shaw-staging.sh >> $SCRIPT_BASE/logs/rdkb-shaw-delivery-to-shaw-staging.log 2>&1
+
+#ANKIT
+#*/5 * * * * /mnt1/ankit/ota-playback-sessions-emr-2.5.3/bin/batch-processor.py -p comcast -e stage -v 2.5.3  >> /mnt1/log/ota-playback-sessions-latest.log 2>&1
+#*/5 * * * * /mnt1/ankit/ota-playback-sessions-emr-2.5.2/bin/batch-processor.py -p cox -e stage -v 2.5.2  >> /mnt1/log/ota-playback-sessions-cox.log 2>&1
+*/5 * * * *  /mnt1/ankit/ota-playback-sessions-emr-2.5.3/bin/batch-processor.py -p shaw -e stage -v 2.5.3  >> /mnt1/log/ota-playback-sessions-shaw.log 2>&1
+#*/5 * * * * /home/hadoop/ankit/aurora-ssl/ota-playback-sessions-emr-2.5.0/bin/batch-processor.py -p rogers -e stage -v 2.5.0  >> /mnt1/log/ota-playback-sessions-aurora-rogers.log 2>&1
+
+#*/3 * * * * /home/hadoop/ankit/ota-download-sessions-emr-2.5.0/bin/batch-processor.py -p comcast -e stage -v 2.5.0  >> /mnt1/log/ota-download-sessions-latest.log 2>&1
+#*/5 * * * * /home/hadoop/ankit/aurora-ssl/ota-download-sessions-2.5.0-SNAPSHOT/bin/batch-processor.py -p cox -e stage -v 2.5.0-SNAPSHOT  >> /mnt1/log/ota-download-sessions-aurora-cox.log 2>&1
+#*/5 * * * * /home/hadoop/ankit/aurora-ssl/ota-download-sessions-2.5.0-SNAPSHOT/bin/batch-processor.py -p shaw -e stage -v 2.5.0-SNAPSHOT  >> /mnt1/log/ota-download-sessions-aurora-shaw.log 2>&1
+#*/5 * * * * /home/hadoop/ankit/aurora-ssl/ota-download-sessions-2.5.0-SNAPSHOT/bin/batch-processor.py -p rogers -e stage -v 2.5.0-SNAPSHOT  >> /mnt1/log/ota-download-sessions-aurora-rogers.log 2>&1
+
+#ANKIT
+
+#*/2 * * * * /mnt/arnab/ota-download-sessions-2.0.5-SNAPSHOT/bin/batch-processor.py -p comcast -e stage -v 2.0.5-SNAPSHOT > /mnt1/log/ota-download-sessions-2.0.5.comcast.log 2>&1
+#*/5 * * * * /mnt/arnab/ota-download-sessions-2.0.5-SNAPSHOT/bin/batch-processor.py -p cox -e stage -v 2.0.5-SNAPSHOT > /mnt1/log/ota-download-sessions-2.0.5.cox.log 2>&1
+#*/5 * * * * /mnt/arnab/ota-download-sessions-2.0.5-SNAPSHOT/bin/batch-processor.py -p shaw -e stage -v 2.0.5-SNAPSHOT > /mnt1/log/ota-download-sessions-2.0.5.shaw.log 2>&1
+#*/5 * * * * /mnt/arnab/ota-download-sessions-2.0.5-SNAPSHOT/bin/batch-processor.py -p rogers -e stage -v 2.0.5-SNAPSHOT > /mnt1/log/ota-download-sessions-2.0.5.rogers.log 2>&1
+
+#ARNAB
+#*/2 * * * * /mnt1/arnab/ota-playback-sessions-emr-2.5.1/bin/batch-processor.py -p videotron -e prod -v 2.5.1 > /mnt1/arnab/ota-playback-sessions-emr-2.5.1.videotron.log 2>&1
+#*/2 * * * * /mnt1/arnab/ota-download-sessions-emr-2.5.0/bin/batch-processor.py -p videotron -e prod -v 2.5.0 > /mnt1/arnab/ota-download-sessions-emr-2.5.0.videotron.log 2>&1
+
+######### Moved Temporaly from 01p #########
+# Legacy DVRScheduler processing. We need to keep these up until partners move to the newer streams.
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh cox 20G >> $SCRIPT_BASE/logs/xre-translator-cox.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh shaw 4G >> $SCRIPT_BASE/logs/xre-translator-shaw.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/xre-translator.sh rogers 4G >> $SCRIPT_BASE/logs/xre-translator-rogers.log 2>&1
+#*/5 * * * * $SCRIPT_BASE/kinesis-est-translator.sh >> $SCRIPT_BASE/logs/kinesis-est-translator.log 2>&1
+
